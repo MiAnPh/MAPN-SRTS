@@ -195,7 +195,7 @@ Across all three maps, high-frequency bus stops are located strictly along major
 - These findings suggest that SRTS funding should not just focus on the school gate, but on the pedestrian-transit interface several blocks away, where the most significant last-mile failures occur.
 
 <iframe 
-  src="Alameda_EPC_Schools_Map.html" 
+  src="data/Alameda_EPC_Schools_Map.html" 
   width="100%" 
   height="600px" 
   style="border:none;">

@@ -79,34 +79,35 @@ Our school data, drawn from California Open Data Portal (2023-2024), may omit no
 
 Since there are no clear cut avenues to mitigate the absence of this data, we will emphasize in our findings, discussion, and implications that the results of our study can only be applied to schools registered with the California Department of Education. 
 ### B) Self-Selection Bias 
-A key missing link in our data acquisition is the travel paths that link schools and households in which students are commuting from. Students in EPCs may self-select into schools outside their district rather than the school nearest to them, which is the assumption our analysis is grounded in. This data is “dark” because we only consider that students will attend their local schools rather than bypassing them for further options. Hand classifies this as self-selection bias; in the context of our analysis it could result in an inaccurate representation of ridership demand at EPC bus stops.
+Hand’s Self-Selection Bias applies because our model assumes students select the school closest to their home. In reality, students from outside the Equity Priority Community (EPC) may self-select into an EPC school. They rely heavily on the bus-to-school path, but their residential data is dark to us because they live outside our study tracts. Conversely, students living in the EPC may attend the local school by walking, meaning our focus on bus stops may over-estimate the necessity of those specific transit paths for the immediate neighborhood.
 
-Our analysis is mostly unaffected by this missing data, we are hoping that by focusing on transit stops we are meeting the needs of a large majority of pedestrians using these streets no matter which jurisdiction they are coming from. 
-### C) Strategic Dark Data
-The transit data we rely on provides scheduled bus frequencies, but may not record instances when buses are too full to stop or other historical reliability disruptions. Hand coins this missing data as strategic dark data. While the transit agencies may report “on-time performances” by skipping stops to meet schedules, this hides the real-life frequency from the data, resulting in the data being incongruent with true rider experience.
+We focus on the bus-stop-to-school link as a universal improvement. Enhancing this path benefits the highest-need users (those who have no choice but to commute) without harming the local walkers who share the same sidewalks. 
 
-We plan to mitigate this by incorporating a reliability buffer into our metrics. Rather than assuming the shortest wait time, we will calculate accessibility based on a “headway +1” basis, assuming a student may miss one full bus cycle due to capacity constraints.
-### D) Proxy Bias
-Our analysis uses enrollment data from the California Open Data Portal. This data may not account for chronic absences in the student population. Hand classifies this type of missing data as proxy bias. Our analysis treats total enrollment as a proxy for students who will ride buses to get to school. However, if absences are high and recurring for any particular analysis area, we may be overforecasting demand for bus transit. 
+### C) Proxy Bias
+Our analysis uses school enrollment data as a proxy for the potential pedestrian load on a given sidewalk. Hand defines Proxy Bias as using a substitute metric that may not perfectly reflect the phenomenon of interest.
+
+We are not forecasting daily ridership or pedestrian counts; rather, we are ranking infrastructure priority. Chronic absenteeism, a form of dark data, means the actual daily usage may be lower than enrollment suggests. However, for the purpose of sidewalk improvement recommendations, we treat enrollment as the maximum potential "service burden" of a path. A sidewalk must be safe and accessible for the entire student body, regardless of whether every student uses it every day.
+
+Instead of scaling down for absenteeism, we acknowledge enrollment as a ceiling for potential impact. This ensures our recommendations prioritize paths with the highest potential to serve the student population. 
 
 ---
 
-### E) Intentional Hiding, Fraud, and Information Asymmetry
+### D) Intentional Hiding, Fraud, and Information Asymmetry
 For intentional hiding, fraud, and information asymmetry, we assume that the California Department of Education and local transit agencies are reporting in good faith for public record. While "gaming the system" (e.g., drivers skipping stops to improve on-time metrics) is addressed in our Strategic Dark Data section, we found no evidence of systematic fraud that would fundamentally alter the physical location of stops or schools.
 
-### F) Technical Limitations and Incomplete Records
+### E) Technical Limitations and Incomplete Records
 While minor gaps likely exist in any large-scale portal, our data consists of static infrastructure and enrollment records rather than real-time sensor streams. Therefore, we do not expect random technical glitches to create the systemic darkness that would invalidate the spatial model.
 
-### G) Experimental Conditions and Cognitive Biases
+### F) Experimental Conditions and Cognitive Biases
 Because this is an observational study of existing infrastructure rather than a controlled trial, Experimental Conditions do not apply. Similarly, Cognitive Biases are minimized here by our reliance on algorithmic spatial joins rather than qualitative surveys or subjective human reporting.
 
-### H) Survivor Bias
+### G) Survivor Bias
 While historically interesting, our study is a point-in-time diagnostic of current equity. We are measuring the existing physical relationship between today's stops and today's schools. We are not trying to explain why the network looks the way it does, but rather how well the surviving network serves the current student population.
 
-### I) Exhaust vs. Designed Data
+### H) Exhaust vs. Designed Data
 Our study primarily utilizes Designed Data (census and enrollment records created for a specific purpose). While Exhaust Data (digital footprints like GPS pings from student phones) could theoretically provide higher resolution, its absence is a choice of scope rather than an unintentional gap. We rely on the designed nature of official records to ensure a consistent baseline across all EPCs.
 
-### J) Missing Data Types (MAR vs. MNAR)
+### I) Missing Data Types (Missing at Random [MAR] vs. Missing Not at Random [MNAR])
 In statistical terms, most of our gaps are Missing Not at Random (MNAR). For instance, the omission of "learning pods" (Section A) is not a random glitch; it is specifically linked to the nature of those institutions. Because these values are MNAR, we cannot use standard imputation to "fill in" the gaps, which reinforces our decision to use a Reliability Buffer and Weighting Factors as our primary means of mitigation.
 
 We plan to mitigate this dark data by applying weighting factors based on district-level absenteeism rates in EPCs to scale our demand forecast to a more realistic daily ridership level. 

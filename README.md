@@ -89,6 +89,8 @@ We plan to mitigate this by incorporating a reliability buffer into our metrics.
 ### D) Proxy Bias
 Our analysis uses enrollment data from the California Open Data Portal. This data may not account for chronic absences in the student population. Hand classifies this type of missing data as proxy bias. Our analysis treats total enrollment as a proxy for students who will ride buses to get to school. However, if absences are high and recurring for any particular analysis area, we may be overforecasting demand for bus transit. 
 
+---
+
 ### E) Intentional Hiding, Fraud, and Information Asymmetry
 For intentional hiding, fraud, and information asymmetry, we assume that the California Department of Education and local transit agencies are reporting in good faith for public record. While "gaming the system" (e.g., drivers skipping stops to improve on-time metrics) is addressed in our Strategic Dark Data section, we found no evidence of systematic fraud that would fundamentally alter the physical location of stops or schools.
 

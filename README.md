@@ -89,6 +89,24 @@ We plan to mitigate this by incorporating a reliability buffer into our metrics.
 ### D) Proxy Bias
 Our analysis uses enrollment data from the California Open Data Portal. This data may not account for chronic absences in the student population. Hand classifies this type of missing data as proxy bias. Our analysis treats total enrollment as a proxy for students who will ride buses to get to school. However, if absences are high and recurring for any particular analysis area, we may be overforecasting demand for bus transit. 
 
+### E) Intentional Hiding, Fraud, and Information Asymmetry
+For intentional hiding, fraud, and information asymmetry, we assume that the California Department of Education and local transit agencies are reporting in good faith for public record. While "gaming the system" (e.g., drivers skipping stops to improve on-time metrics) is addressed in our Strategic Dark Data section, we found no evidence of systematic fraud that would fundamentally alter the physical location of stops or schools.
+
+### F) Technical Limitations and Incomplete Records
+While minor gaps likely exist in any large-scale portal, our data consists of static infrastructure and enrollment records rather than real-time sensor streams. Therefore, we do not expect random technical glitches to create the systemic darkness that would invalidate the spatial model.
+
+### G) Experimental Conditions and Cognitive Biases
+Because this is an observational study of existing infrastructure rather than a controlled trial, Experimental Conditions do not apply. Similarly, Cognitive Biases are minimized here by our reliance on algorithmic spatial joins rather than qualitative surveys or subjective human reporting.
+
+### H) Survivor Bias
+While historically interesting, our study is a point-in-time diagnostic of current equity. We are measuring the existing physical relationship between today's stops and today's schools. We are not trying to explain why the network looks the way it does, but rather how well the surviving network serves the current student population.
+
+### I) Exhaust vs. Designed Data
+Our study primarily utilizes Designed Data (census and enrollment records created for a specific purpose). While Exhaust Data (digital footprints like GPS pings from student phones) could theoretically provide higher resolution, its absence is a choice of scope rather than an unintentional gap. We rely on the designed nature of official records to ensure a consistent baseline across all EPCs.
+
+### J) Missing Data Types (MAR vs. MNAR)
+In statistical terms, most of our gaps are Missing Not at Random (MNAR). For instance, the omission of "learning pods" (Section A) is not a random glitch; it is specifically linked to the nature of those institutions. Because these values are MNAR, we cannot use standard imputation to "fill in" the gaps, which reinforces our decision to use a Reliability Buffer and Weighting Factors as our primary means of mitigation.
+
 We plan to mitigate this dark data by applying weighting factors based on district-level absenteeism rates in EPCs to scale our demand forecast to a more realistic daily ridership level. 
 ## 4. Initial Results and Visualizations
 ### A) Equity in School Access

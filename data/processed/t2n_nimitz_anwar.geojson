@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "t2n_nimitz_cleaned_anwar",
+"name": "t2n_nimitz_cleaned_cleaned",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
 "features": [
 { "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609135.437527438625693, 4549594.59871250204742 ], [ -13609128.95066874101758, 4549589.34893006272614 ] ] ] } },

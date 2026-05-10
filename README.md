@@ -111,6 +111,11 @@ Our study primarily utilizes Designed Data (census and enrollment records create
 In statistical terms, most of our gaps are Missing Not at Random (MNAR). For instance, the omission of "learning pods" (Section A) is not a random glitch; it is specifically linked to the nature of those institutions. Because these values are MNAR, we cannot use standard imputation to "fill in" the gaps, which reinforces our decision to use a Reliability Buffer and Weighting Factors as our primary means of mitigation.
 
 We plan to mitigate this dark data by applying weighting factors based on district-level absenteeism rates in EPCs to scale our demand forecast to a more realistic daily ridership level. 
+
+### K) The Modifiable Areal Unit Problem (MAUP)
+Our analysis relies on Census Tract boundaries to define EPCs. MAUP applies here because the geographical borders of an EPC are modifiable. If the boundaries were drawn differently, our priority corridors might shift.
+
+We acknowledge that a hard border approach creates a binary (EPC vs. non-EPC) that may not reflect the continuous nature of pedestrian travel. We mitigate this by focusing on the corridors that connect to schools, ensuring that improvements serve the path rather than just the polygon.
 ## 4. Initial Results and Visualizations
 ### A) Equity in School Access
 The primary justification for our analysis on bus stop connectivity in relation to school access is the higher degree of transit reliance found within EPCs. As shown in Figure 1, census tracts within EPCs show a higher median proportion of households without access to a vehicle compared to Non-EPC tracts. Most Non-EPC tracts cluster below 10 percent, EPC tracts see vehicle-less rates between 10 and 20 percent with outliers as high as 75 percent. 

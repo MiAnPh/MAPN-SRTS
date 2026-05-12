@@ -1,3 +1,7 @@
+---
+layout: default
+title: Final Project Report
+---
 <h1 align="center">Closing the Gap: A Data-Driven Priority Index for Safe Routes to School in Equity Priority Communities</h1>
 
 <div align="center">

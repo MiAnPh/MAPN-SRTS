@@ -32,7 +32,7 @@ title: Final Project Report
 </div>
 
 ### Jump to Section:
-[Context and Motivation For Research](#Context-and-Motivation) | [Methodology](#Methodology) | [Missing Data Analysis](#Missing-Data) | [Initial Results and Visualizations](#Initial-Results-Visualizations)
+[Context and Motivation For Research](#Context-and-Motivation) | [Methodology](#Methodology) | [Limitations](#Limitations) | [Initial Results and Visualizations](#Initial-Results-Visualizations)
 
 ---
 
@@ -81,7 +81,11 @@ Our data cleaning process included the following steps for the following categor
 3. ACS data: The raw ACS 2020-2024 data provided raw counts rather than percentages. To normalize this, we calculated the proportion of zero vehicle households per tract by dividing households with access to zero vehicles by the total number of households. 
 4. AC Transit data (bus stops): open-source data was downloaded from the AC Transit Open Data Portal, and clipped to only include the selected EPCs. Remaining data cleaning for bus stops includes joining the stops with bus lines and schedules to filter out buses that don’t run frequent service during peak hours.
 5. Tile2Net (pedestrian pathways): we set the pathway geometries into Tile2Net by obtaining the rectangular envelope of selected EPCs and running Tile2Net, we then clipped the output to our EPCs. Remaining data cleaning for pedestrian pathways includes distinguishing between greenpaths, sidewalks, and crosswalks, and between gaps that are model noise versus genuine service gaps. Manual cleaning may be necessary to distinguish these data.
-## 3. Missing Data Analysis <a name="Missing-Data"></a>
+## 3. Limitations <a name="Limitations"></a>
+The following section outlines the boundaries of our analytical framework. While our methodology provides a data-driven approach to prioritizing sidewalk improvements, it is important to recognize that a spatial model is an approximation of reality. Our analysis primarily focuses on the physical proximity and infrastructure potential of school-to-transit corridors. It does not capture real-time behavioral data, individual student route choices, or the micro-scale quality of sidewalk pavement (such as cracks or narrowness) beyond what is available in the public record.
+Our findings are grounded in two primary assumptions: first, that enrollment is a valid proxy for the maximum potential impact of infrastructure improvements; and second, that students prioritize the shortest walking path between transit and school. To ensure the integrity of our results, we have validated our outputs against the MTC EPC definitions and performed internal pipeline audits to ensure that spatial joins correctly handled the coordinate reference system shifts across various California state and local datasets.
+Despite these validations, our model is subject to several forms of Dark Data. These limitations are detailed below.
+## Missing Data Analysis
 While our model integrates bus, school, and census tract EPC data, it is subject to several forms of “Dark Data”, or data that is missing or hidden during the analytical process, as introduced by David J. Hand in his novel Dark Data: Why What You Don’t Know Matters<sup>18</sup>. This Dark Data is identified and classified in the following sections.
 ### A) Selection Bias and Target Population Gaps
 Our school data, drawn from California Open Data Portal (2023-2024), may omit non-traditional learning institutions such as “learning pods”, unregistered micro-schools post-pandemic, and transitional kindergarten and pre-K programs. This omission can be classified as both selection bias and a mismatch of the target population and the sample population. In other words, the data we are relying on only identifies schools officially registered by the State, leaving out non-traditional and unregistered schools. This bias can result in our conclusions also leaving students omitted by the data, resulting in an incomplete analysis of the impacted target population. 

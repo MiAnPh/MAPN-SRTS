@@ -122,9 +122,9 @@ In statistical terms, most of our gaps are Missing Not at Random (MNAR). For ins
 We plan to mitigate this dark data by applying weighting factors based on district-level absenteeism rates in EPCs to scale our demand forecast to a more realistic daily ridership level. 
 
 ### K) The Modifiable Areal Unit Problem (MAUP)
-Our analysis relies on Census Tract boundaries to define EPCs. MAUP applies here because the geographical borders of an EPC are modifiable. If the boundaries were drawn differently, our priority corridors might shift.
+Our analysis utilizes Census Tract boundaries as the primary unit of analysis to define EPCs. We selected Census Tracts because they are the smallest geographic unit for which the high-quality longitudinal demographic data required by the EPC framework (such as income-to-poverty ratios and vehicle ownership) is consistently available.
 
-We acknowledge that a hard border approach creates a binary (EPC vs. non-EPC) that may not reflect the continuous nature of pedestrian travel. We mitigate this by focusing on the corridors that connect to schools, ensuring that improvements serve the path rather than just the polygon.
+However, we acknowledge that Census Tracts are modifiable areal units; they are administrative boundaries rather than natural or behavioral ones. Hand’s framework warns that data can be "darkened" by this aggregation, a phenomenon known as MAUP. If these boundaries were redrawn—for example, shifting a border by one block—certain school zones might lose or gain EPC status, fundamentally shifting our priority recommendations.
 ## 4. Initial Results and Visualizations <a name="Initial-Results-Visualizations"></a>
 ### A) Equity in School Access
 The primary justification for our analysis on bus stop connectivity in relation to school access is the higher degree of transit reliance found within EPCs. As shown in Figure 1, census tracts within EPCs show a higher median proportion of households without access to a vehicle compared to Non-EPC tracts. Most Non-EPC tracts cluster below 10 percent, EPC tracts see vehicle-less rates between 10 and 20 percent with outliers as high as 75 percent. 

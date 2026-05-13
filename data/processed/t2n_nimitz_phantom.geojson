@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "t2n_nimitz_phantom",
+"name": "t2n_nimitz_phantom_4",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
 "features": [
 { "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609135.437527438625693, 4549594.59871250204742 ], [ -13609128.95066874101758, 4549589.34893006272614 ] ] ] } },
@@ -1256,7 +1256,7 @@
 { "type": "Feature", "properties": { "f_type": "sidewalk_connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609341.707086151465774, 4550498.365491741336882 ], [ -13609338.669048741459846, 4550502.969095153734088 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk_connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609347.888773310929537, 4550497.362358408980072 ], [ -13609345.216507775709033, 4550503.42702401150018 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609508.422309381887317, 4550939.265641933307052 ], [ -13609585.228755492717028, 4551024.365714170970023 ] ] ] } },
-{ "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609689.323203913867474, 4550716.754184501245618 ], [ -13609704.310004942119122, 4550717.958251882344484 ], [ -13609715.00112440995872, 4550726.898338689468801 ] ] ] } },
+{ "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609650.698187133297324, 4550811.078438715077937 ], [ -13609640.500673662871122, 4550821.422097178176045 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609809.373727336525917, 4550642.829838141798973 ], [ -13609794.144644880667329, 4550656.062572108581662 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "crosswalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609338.669048741459846, 4550502.969095153734088 ], [ -13609330.714519646018744, 4550511.135246138088405 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609322.896091876551509, 4550516.081791277974844 ], [ -13609309.963768927380443, 4550501.259798889048398 ] ] ] } },
@@ -1530,7 +1530,7 @@
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609682.165980691090226, 4550781.195891950279474 ], [ -13609693.590404851362109, 4550772.665127567015588 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609650.698187133297324, 4550811.078438715077937 ], [ -13609682.165980691090226, 4550781.195891950279474 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609629.116439118981361, 4550805.421019051223993 ], [ -13609648.74444685690105, 4550787.022023855708539 ] ] ] } },
-{ "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609650.698187133297324, 4550811.078438715077937 ], [ -13609640.500673662871122, 4550821.422097178176045 ], [ -13609637.325360154733062, 4550824.642917483113706 ] ] ] } },
+{ "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609640.500673662871122, 4550821.422097178176045 ], [ -13609637.325360154733062, 4550824.642917483113706 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk_connection" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609640.500673662871122, 4550821.422097178176045 ], [ -13609636.528331423178315, 4550816.779939508065581 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609637.288568636402488, 4550824.972677000798285 ], [ -13609639.343390638008714, 4550828.272581041790545 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609639.343390638008714, 4550828.272581041790545 ], [ -13609646.354100849479437, 4550833.620425020344555 ] ] ] } },
@@ -2648,6 +2648,8 @@
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609650.651028368622065, 4549504.225872910581529 ], [ -13609597.790526792407036, 4549529.72992267459631 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609650.651028368622065, 4549504.225872910581529 ], [ -13609654.491489076986909, 4549499.430957183241844 ] ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609884.778891440480947, 4549784.452902281656861 ], [ -13609807.973136436194181, 4549749.859857371076941 ] ] ] } },
-{ "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609907.376413581892848, 4549828.818684245459735 ], [ -13609877.429953211918473, 4549958.949159163981676 ] ] ] } }
+{ "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609907.376413581892848, 4549828.818684245459735 ], [ -13609877.429953211918473, 4549958.949159163981676 ] ] ] } },
+{ "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609689.323203913867474, 4550716.754184501245618 ], [ -13609703.503255426883698, 4550717.953548266552389 ] ] ] } },
+{ "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13609703.503255426883698, 4550717.953548266552389 ], [ -13609715.00112440995872, 4550726.898338689468801 ] ] ] } }
 ]
 }

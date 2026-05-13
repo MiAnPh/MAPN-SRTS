@@ -139,9 +139,7 @@ However, we acknowledge that Census Tracts are modifiable areal units; they are 
 ## 4. Initial Results and Visualizations <a name="Initial-Results-Visualizations"></a>
 
 The map below layers building-level footprints, MTC designated EPCs, and schools in EPCs. The EPCs highlight areas requiring focused MTC investment and support; users can toggle these layers independently to explore how school proximity overlaps with socioeconomic priority zones. The sections below include a detailed analysis of school access equity, using metrics such as Zero Vehicle Households (ZVH), socioeconomic status, race/ethnicity, and school types.
-<p align="center">
-  <i><b>Figure 8:</b> Analysis of Pedestrian and Transit Connectivity to Schools within West Oakland EPC</i>
-</p>
+<iframe src="Alameda_EPC_Schools_Map.html" width="100%" height="600px" style="border:none;"> </iframe>
 
 ### A) Equity in School Access
 The primary justification for our analysis on bus stop connectivity in relation to school access is the higher degree of transit reliance found within EPCs. As shown in Figure 1, census tracts within EPCs show a higher median proportion of households without access to a vehicle compared to Non-EPC tracts. Most Non-EPC tracts cluster below 10 percent, EPC tracts see vehicle-less rates between 10 and 20 percent with outliers as high as 75 percent. 
@@ -219,6 +217,9 @@ In the Castro Valley EPC, the primary barrier shifts from land use to topography
 
 Furthermore, schools in Figure 10 are situated at the periphery of the pedestrian network. The northernmost school exists in a transit desert, with almost no high-frequency bus stops linking the campus to the residential clusters in the hills. This represents a severe access deficit: students are forced to rely either on private vehicles, which our data shows are statistically more scarce in EPCs, or walk the entirety of high-grade, steep terrain.
 
+<p align="center">
+  <i><b>Figure 8:</b> Analysis of Pedestrian and Transit Connectivity to Schools within West Oakland EPC</i>
+</p>
 **placeholder **
 
 Across all three maps, high-frequency bus stops are located strictly along major arterial roads, with minimal transit penetration into residential clusters. With this context, a walk to the nearest bus stop could mean navigating through industrial zones, steep terrain, or major freeway intersections. This highlights a critical service gap as the bus stop distribution prioritizes regional through-traffic rather than the “last-mile” transportation needs of students.
@@ -228,7 +229,6 @@ Across all three maps, high-frequency bus stops are located strictly along major
 - The concentration of stops on arterials assumes a baseline of pedestrian connectivity that our Tile2Net analysis proves is often missing.
 - These findings suggest that SRTS funding should not just focus on the school gate, but on the pedestrian-transit interface several blocks away, where the most significant last-mile failures occur.
 
-<iframe src="Alameda_EPC_Schools_Map.html" width="100%" height="600px" style="border:none;"> </iframe>
 
 ## References
 1. Metropolitan Transportation Commission (MTC), “Bay Area Safe Routes to School.” https://mtc.ca.gov/funding/investment-strategies-commitments/climate-protection/bay-area-safe-routes-school.

@@ -195,18 +195,37 @@ While we map the demographics of schools within EPCs, a notable caveat remains a
 ### B) Generated Maps of EPCs
 The following analysis details the spatial relationship between pedestrian infrastructure, high-frequency transit nodes, and K-12 educational institutions across three representative EPC tracts. By layering Tile2Net-extracted pedestrian geometries with bus stop and school data, we can identify specific barriers that contribute to educational inequity. 
 
-#### [insert] EPC Accessibility Analysis (update to current maps)
-In the central and eastern portion of the Alameda Census Tract, Map 1 shows relatively high network permeability with respect to the two schools. However, there’s a notable gap west of Main Street. In this area, high-frequency bus stops are distributed less uniformly and gaps in the pedestrian paths are visible as well. Students commuting from the western portion of the EPC face a double burden: they reside at a greater geographic distance from the schools and must navigate significant infrastructure gaps to reach the nearest available bus stop. 
+#### Oakland Airport EPC Accessibility Analysis 
+analysis...
 
-**placeholder **
+<div align="center">
+<img width="800" height="800" alt="airport_gaps" src="https://github.com/user-attachments/assets/1ab445bc-e4c7-4232-9aa6-eb42433b2ace" />
+</div>
 <p align="center">
-  <i><b>Figure 6:</b> Analysis of Pedestrian and Transit Connectivity to Schools within Oakland Airport EPC</i>
+  <i><b>Figure 6:</b> Gaps in Pedestrian Network Oakland Airport EPC</i>
 </p>
 
-#### [insert] EPC Accessibility Analysis (update to current maps)
-The San Leandro EPC highlights a land-use mismatch. The southern residential core possesses a high-density pedestrian grid, indicating strong local walkability. However, as the network moves northwest toward industrial zones, the infrastructure collapses. Pedestrian paths become sparse and disjointed, and high-frequency bus stops disappear entirely.
+...
 
-While these areas are primarily industrial, they often border or contain residential pockets or last-mile segments of a student’s commute. Students living near or adjacent to these industrial buffers are effectively isolated from the transit network. They must traverse long, high-stress distances through areas designed for freight and heavy machinery rather than student safety to access the nearest arterial bus line. This illustrates how industrial zoning acts as a hard barrier to equitable school access.
+<div align="center">
+<img width="800" height="800" alt="airport_important_gap" src="https://github.com/user-attachments/assets/51554699-2a74-4131-86d4-7753b8b103fd" />
+</div>
+<p align="center">
+  <i><b>Figure 6:</b> *Important* Gaps in Pedestrian Network Oakland Airport EPC</i>
+</p>
+
+...
+<div align="center">
+  <img width="800" height="800" alt="airport_new_routes" src="https://github.com/user-attachments/assets/74c443f8-2b06-4315-b351-15ed1a79ed0b" />
+</div>
+<p align="center">
+  <i><b>Figure 6:</b> Routes(?) Oakland Airport EPC</i>
+</p>
+
+
+#### Nimitz EPC Accessibility Analysis 
+analysis ...
+
 **placeholder **
 <p align="center">
   <i><b>Figure 7:</b> Analysis of Pedestrian and Transit Connectivity to Schools within Nimitz EPC</i>

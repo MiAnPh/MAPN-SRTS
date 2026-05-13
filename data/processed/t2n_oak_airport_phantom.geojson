@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "t2n_oak_airport_phantom",
+"name": "t2n_oak_airport_phantom_2",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
 "features": [
 { "type": "Feature", "properties": { "f_type": "sidewalk_plus" }, "geometry": { "type": "LineString", "coordinates": [ [ -13603269.371622379869223, 4545716.492365672253072 ], [ -13603263.238578679040074, 4545705.518423497676849 ] ] } },
@@ -810,7 +810,6 @@
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602645.093934576958418, 4545764.332144456915557 ], [ -13602642.629733333364129, 4545766.192949212156236 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602432.486577847972512, 4545822.652689572423697 ], [ -13602425.964515568688512, 4545820.569195477291942 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602432.486577847972512, 4545822.652689572423697 ], [ -13602443.707510994747281, 4545831.130563898943365 ] ] } },
-{ "type": "Feature", "properties": { "f_type": "sidewalk_connection" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602445.464908501133323, 4545832.169336555525661 ], [ -13602442.69574717245996, 4545836.854208823293447 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602627.17705387994647, 4545777.959755555726588 ], [ -13602642.629733333364129, 4545766.192949212156236 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602611.5227189976722, 4545770.766344360075891 ], [ -13602587.040652543306351, 4545787.992884734645486 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602587.040652543306351, 4545787.992884734645486 ], [ -13602512.981435902416706, 4545849.156062351539731 ], [ -13602507.124130276963115, 4545849.870626787655056 ] ] } },
@@ -819,7 +818,6 @@
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602715.474931603297591, 4545862.170756868086755 ], [ -13602747.91122286953032, 4545858.383197902701795 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602715.474931603297591, 4545862.170756868086755 ], [ -13602714.676566051319242, 4545862.056094681844115 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602443.707510994747281, 4545831.130563898943365 ], [ -13602487.174730556085706, 4545856.823418834246695 ] ] } },
-{ "type": "Feature", "properties": { "f_type": "crosswalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602442.69574717245996, 4545836.854208823293447 ], [ -13602433.341696882620454, 4545851.962723830714822 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602500.03037490695715, 4545858.822801941074431 ], [ -13602507.124130276963115, 4545849.870626787655056 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602487.174730556085706, 4545856.823418834246695 ], [ -13602495.857666805386543, 4545860.544534252025187 ] ] } },
 { "type": "Feature", "properties": { "f_type": "sidewalk" }, "geometry": { "type": "LineString", "coordinates": [ [ -13602500.03037490695715, 4545858.822801941074431 ], [ -13602495.857666805386543, 4545860.544534252025187 ] ] } },

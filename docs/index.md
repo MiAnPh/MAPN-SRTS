@@ -211,7 +211,7 @@ analysis...
 <img width="800" height="800" alt="airport_important_gap" src="https://github.com/user-attachments/assets/51554699-2a74-4131-86d4-7753b8b103fd" />
 </div>
 <p align="center">
-  <i><b>Figure 6:</b> *Important* Gaps in Pedestrian Network Oakland Airport EPC</i>
+  <i><b>Figure 7:</b> *Important* Gaps in Pedestrian Network Oakland Airport EPC</i>
 </p>
 
 ...
@@ -219,34 +219,67 @@ analysis...
   <img width="800" height="800" alt="airport_new_routes" src="https://github.com/user-attachments/assets/74c443f8-2b06-4315-b351-15ed1a79ed0b" />
 </div>
 <p align="center">
-  <i><b>Figure 6:</b> Routes(?) Oakland Airport EPC</i>
+  <i><b>Figure 8:</b> Routes(?) Oakland Airport EPC</i>
 </p>
 
 
 #### Nimitz EPC Accessibility Analysis 
 analysis ...
 
-**placeholder **
+<div align="center">
+<img width="800" height="800" alt="nimitz_gaps" src="https://github.com/user-attachments/assets/797e2709-5c61-474a-bd98-80cdd18b9fac" />
+</div>
 <p align="center">
-  <i><b>Figure 7:</b> Analysis of Pedestrian and Transit Connectivity to Schools within Nimitz EPC</i>
+  <i><b>Figure 9:</b> Gaps in Pedestrian Network Nimitz EPC</i>
 </p>
 
-#### [insert] EPC Accessibility Analysis (update to current maps)
-In the Castro Valley EPC, the primary barrier shifts from land use to topography and structural severance. Unlike the flat grids of the previous sites, the pedestrian network here is disjointed, with paths clustered along ridgelines and valley floors. This creates a high "Topographical Tax"; although two points may appear spatially proximate in a 2D Euclidean model, the actual physical effort and safety risk required to navigate steep, winding terrain without continuous sidewalks are significantly higher.
+...
 
-Furthermore, schools in Figure 10 are situated at the periphery of the pedestrian network. The northernmost school exists in a transit desert, with almost no high-frequency bus stops linking the campus to the residential clusters in the hills. This represents a severe access deficit: students are forced to rely either on private vehicles, which our data shows are statistically more scarce in EPCs, or walk the entirety of high-grade, steep terrain.
-
+<div align="center">
+<img width="800" height="800" alt="nimitz_important_gap" src="https://github.com/user-attachments/assets/b3d2d2dd-d802-4f1e-90ab-926c4af104cb" />
+</div>
 <p align="center">
-  <i><b>Figure 8:</b> Analysis of Pedestrian and Transit Connectivity to Schools within West Oakland EPC</i>
+  <i><b>Figure 10:</b> *Important* Gaps in Pedestrian Network Nimitz EPC</i>
 </p>
-**placeholder **
+...
 
-Across all three maps, high-frequency bus stops are located strictly along major arterial roads, with minimal transit penetration into residential clusters. With this context, a walk to the nearest bus stop could mean navigating through industrial zones, steep terrain, or major freeway intersections. This highlights a critical service gap as the bus stop distribution prioritizes regional through-traffic rather than the “last-mile” transportation needs of students.
+<div align="center">
+<img width="800" height="800" alt="nimitz_new_routes" src="https://github.com/user-attachments/assets/68887ad1-3790-47e4-838b-985f5b0a299d" />
+</div>
+<p align="center">
+  <i><b>Figure 11:</b> Routes(?) Nimitz EPC</i>
+</p>
+
+#### West Oakland EPC Accessibility Analysis 
+analysis ... 
+
+<div align="center">
+<img width="800" height="800" alt="west_oakland_gaps" src="https://github.com/user-attachments/assets/82575e48-3305-41b1-96bf-6e5ed42d72e8" />
+</div>
+<p align="center">
+  <i><b>Figure 12:</b> Gaps in Pedestrian Network West Oakland EPC</i>
+</p>
+
+...
+
+<div align="center">
+<img width="800" height="800" alt="west_oakland_important_gap" src="https://github.com/user-attachments/assets/785b2cfe-4a8e-4d10-a17a-48cf42af4d06" />
+<p align="center">
+  <i><b>Figure 13:</b> *Important* Gaps in Pedestrian Network West Oakland EPC</i>
+</p>
+
+...
+
+<div align="center">
+<img width="800" height="800" alt="west_oakland_new_routes" src="https://github.com/user-attachments/assets/14e16145-b788-44f4-8ee8-e769694e14df" />
+<p align="center">
+  <i><b>Figure 14:</b> Routes(?) West Oakland EPC</i>
+</p>
+
+...
 
 #### Key Patterns
-- Students must navigate high-stress environments, including industrial zones, steep grades, and major freeway intersections, to reach "high-frequency" stops.
-- The concentration of stops on arterials assumes a baseline of pedestrian connectivity that our Tile2Net analysis proves is often missing.
-- These findings suggest that SRTS funding should not just focus on the school gate, but on the pedestrian-transit interface several blocks away, where the most significant last-mile failures occur.
+- ....
 
 
 ## References

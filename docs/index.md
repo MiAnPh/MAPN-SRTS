@@ -81,6 +81,13 @@ Our data cleaning process included the following steps for the following categor
 3. ACS data: The raw ACS 2020-2024 data provided raw counts rather than percentages. To normalize this, we calculated the proportion of zero vehicle households per tract by dividing households with access to zero vehicles by the total number of households. 
 4. AC Transit data (bus stops): open-source data was downloaded from the AC Transit Open Data Portal, and clipped to only include the selected EPCs. Remaining data cleaning for bus stops includes joining the stops with bus lines and schedules to filter out buses that don’t run frequent service during peak hours.
 5. Tile2Net (pedestrian pathways): we set the pathway geometries into Tile2Net by obtaining the rectangular envelope of selected EPCs and running Tile2Net, we then clipped the output to our EPCs. Remaining data cleaning for pedestrian pathways includes distinguishing between greenpaths, sidewalks, and crosswalks, and between gaps that are model noise versus genuine service gaps. Manual cleaning may be necessary to distinguish these data.
+
+We include a map in Section 4, Initial results, to provide a visual representation of EPC boundaries, socioeconomic status, and school location with regard to EPCs [above categories 1, 2, and 3]. For this map, we gathered the following data:
+1. Car-ownership metrics were derived from the 2018 American Community Survey (ACS) 5-Year Estimates (Table B25044). We calculated the ‘% Car 2. Free’ metric by aggregating households with zero available vehicles across both owner and renter tenures, providing a proxy for transit dependency.
+3. Building geometry was downloaded from Dryad (https://doi.org/10.7280/D16387) and filtered for Alameda County using QGIS due to its large file size. 
+4. The EPC layer was ingested via MTC API.
+5. School locations were mapped using datasets from the California Open Data Portal.
+
 ## 3. Limitations <a name="Limitations"></a>
 The following section outlines the boundaries of our analytical framework. While our methodology provides a data-driven approach to prioritizing sidewalk improvements, it is important to recognize that a spatial model is an approximation of reality. Our analysis primarily focuses on the physical proximity and infrastructure potential of school-to-transit corridors. It does not capture real-time behavioral data, individual student route choices, or the micro-scale quality of sidewalk pavement (such as cracks or narrowness) beyond what is available in the public record.
 Our findings are grounded in two primary assumptions: first, that enrollment is a valid proxy for the maximum potential impact of infrastructure improvements; and second, that students prioritize the shortest walking path between transit and school. To ensure the integrity of our results, we have validated our outputs against the MTC EPC definitions and performed internal pipeline audits to ensure that spatial joins correctly handled the coordinate reference system shifts across various California state and local datasets.
@@ -130,6 +137,12 @@ Our analysis utilizes Census Tract boundaries as the primary unit of analysis to
 
 However, we acknowledge that Census Tracts are modifiable areal units; they are administrative boundaries rather than natural or behavioral ones. Hand’s framework warns that data can be "darkened" by this aggregation, a phenomenon known as MAUP. If these boundaries were redrawn—for example, shifting a border by one block—certain school zones might lose or gain EPC status, fundamentally shifting our priority recommendations.
 ## 4. Initial Results and Visualizations <a name="Initial-Results-Visualizations"></a>
+
+The map below layers building-level footprints, MTC designated EPCs, and schools in EPCs. The EPCs highlight areas requiring focused MTC investment and support; users can toggle these layers independently to explore how school proximity overlaps with socioeconomic priority zones. The sections below include a detailed analysis of school access equity, using metrics such as Zero Vehicle Households (ZVH), socioeconomic status, race/ethnicity, and school types.
+<p align="center">
+  <i><b>Figure 8:</b> Analysis of Pedestrian and Transit Connectivity to Schools within West Oakland EPC</i>
+</p>
+
 ### A) Equity in School Access
 The primary justification for our analysis on bus stop connectivity in relation to school access is the higher degree of transit reliance found within EPCs. As shown in Figure 1, census tracts within EPCs show a higher median proportion of households without access to a vehicle compared to Non-EPC tracts. Most Non-EPC tracts cluster below 10 percent, EPC tracts see vehicle-less rates between 10 and 20 percent with outliers as high as 75 percent. 
 
@@ -207,9 +220,6 @@ In the Castro Valley EPC, the primary barrier shifts from land use to topography
 Furthermore, schools in Figure 10 are situated at the periphery of the pedestrian network. The northernmost school exists in a transit desert, with almost no high-frequency bus stops linking the campus to the residential clusters in the hills. This represents a severe access deficit: students are forced to rely either on private vehicles, which our data shows are statistically more scarce in EPCs, or walk the entirety of high-grade, steep terrain.
 
 **placeholder **
-<p align="center">
-  <i><b>Figure 8:</b> Analysis of Pedestrian and Transit Connectivity to Schools within West Oakland EPC</i>
-</p>
 
 Across all three maps, high-frequency bus stops are located strictly along major arterial roads, with minimal transit penetration into residential clusters. With this context, a walk to the nearest bus stop could mean navigating through industrial zones, steep terrain, or major freeway intersections. This highlights a critical service gap as the bus stop distribution prioritizes regional through-traffic rather than the “last-mile” transportation needs of students.
 

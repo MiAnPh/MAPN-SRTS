@@ -70,9 +70,16 @@ The MTC/ABAG dataset on Plan Bay Area (PBA) 2050 Equity Priority Communities inc
 
 Given potential changes or complete reconfiguration of Census tract boundaries, we conducted a brief spatial analysis for our study areas in Alameda County by overlaying the 2018 5-Year ACS PBA 2050 EPC Census tracts over the 2024 5-Year ACS Census tracts with matching GEOIDs to the PBA 2050 EPCs. We found that only 4 out of the 101 EPCs in Alameda County no longer existed in the 2024 5-Year ACS, and only 3.3% of the combined area of all Alameda County EPCs is missing in the estimates for the share of households without a vehicle. Examining the overlaid map, the Census tract boundaries of the EPCs that remained in the 2024 5-Year appeared to be relatively similar to the original 2018 5-Year ACS boundaries.
 
-Information about the transportation network in EPCs in Alameda County originates from one public-facing data set from AC Transit and two open-source data processing platforms, OSMnx and Tile2Net. The AC Transit General Transit Speed Specification (GTFS) CSV file provides information about transit service throughout the AC Transit service area in Alameda and Contra Costa counties. Specifically, GTFS provides the latitude and longitude of bus stop locations, bus stop names, and a link to conduct spatial joins with bus stop locations with other attribute data for each bus stop (e.g., information about the bus lines served by the bus stop). Our analysis will use August 2025 GTFS data, following the AC Transit realignment. Though the data collection period for students and EPC Census tract demographics lags behind the AC Transit GTFS data, we reason that the inclusion of the most recent GTFS data in our final deliverable will provide a more accurate representation of how students travel by foot or on wheels from transit stops to schools, given the most recent data we have on transit stops, schools, and neighborhoods from the data available.
+Information about the transportation network in EPCs in Alameda County originates from one public-facing data set from AC Transit and two open-source data processing platforms, OSMnx and Tile2Net. The AC Transit General Transit Speed Specification (GTFS) CSV file provides information about transit service throughout the AC Transit service area in Alameda and Contra Costa counties. Specifically, GTFS provides the latitude and longitude of bus stop locations, bus stop names, and a link to conduct spatial joins with bus stop locations with other attribute data for each bus stop (e.g., information about the bus lines served by the bus stop). Our analysis will use August 2025 GTFS data, following the AC Transit realignment. Though the data collection period for students and EPC Census tract demographics lags behind the AC Transit GTFS data, we reason that the inclusion of the most recent GTFS data in our final deliverable will provide a more accurate representation of how students travel by foot or on wheels from transit stops to schools, given the most recent data we have on transit stops, schools, and neighborhoods from the data available. Map 1 below was generated to visualize the spatial distribution of schools and bus stops within the study areas. 
 
 OSMnx and Tile2Net are two Python packages that generate data about street and pedestrian infrastructure. OSMnx produces network graphs that include spatial data for nodes and edges, including location and distance. Tile2Net provides satellite imagery data for Alameda County to generate polygons of pedestrian infrastructure, including roads, sidewalks, crosswalks, and other pedestrian infrastructure (e.g., curb ramps). The computer vision and semantic segmentation model will parse through satellite images of Alameda County at zoom level 19, or 0.3 meters per pixel, to estimate data about the active transportation network. Our research team is still examining the metadata of these platforms to determine the data collection period of these resources.
+
+<iframe src="schools_and_buses_map.html" width="100%" height="600px" style="border:none;"> </iframe>
+</div>
+<p align="center">
+  <i><b>Map 1:</b> Schools and Bus Stops in the Oakland Area</i>
+</p>
+
 ### B) Data Cleaning and Model Limitations
 Our data cleaning process included the following steps for the following categories:
 
@@ -140,6 +147,10 @@ However, we acknowledge that Census Tracts are modifiable areal units; they are 
 
 The map below layers building-level footprints, MTC designated EPCs, and schools in EPCs. The EPCs highlight areas requiring focused MTC investment and support; users can toggle these layers independently to explore how school proximity overlaps with socioeconomic priority zones. The sections below include a detailed analysis of school access equity, using metrics such as Zero Vehicle Households (ZVH), socioeconomic status, race/ethnicity, and school types.
 <iframe src="Alameda_EPC_Schools_Map.html" width="100%" height="600px" style="border:none;"> </iframe>
+</div>
+<p align="center">
+  <i><b>Map 2:</b> Zero Vehicle Households and Schools Below the Poverty Line</i>
+</p>
 
 ### A) Equity in School Access
 The primary justification for our analysis on bus stop connectivity in relation to school access is the higher degree of transit reliance found within EPCs. As shown in Figure 1, census tracts within EPCs show a higher median proportion of households without access to a vehicle compared to Non-EPC tracts. Most Non-EPC tracts cluster below 10 percent, EPC tracts see vehicle-less rates between 10 and 20 percent with outliers as high as 75 percent. 

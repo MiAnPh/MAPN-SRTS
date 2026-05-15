@@ -213,16 +213,16 @@ analysis...
 <img width="800" height="800" alt="airport_gaps" src="https://github.com/user-attachments/assets/1ab445bc-e4c7-4232-9aa6-eb42433b2ace" />
 </div>
 <p align="center">
-  <i><b>Figure 6:</b> Gaps in Pedestrian Network Oakland Airport EPC</i>
+  <i><b>Figure 6:</b> All Identified Gaps in Pedestrian Network Oakland Airport EPC</i>
 </p>
 
 ...
 
 <div align="center">
-<img width="800" height="800" alt="airport_important_gap" src="https://github.com/user-attachments/assets/51554699-2a74-4131-86d4-7753b8b103fd" />
+<img width="800" height="800" alt="airport_important_gap (1)" src="https://github.com/user-attachments/assets/7730dac2-ed11-4f39-8298-0ba36f6557f4" />
 </div>
 <p align="center">
-  <i><b>Figure 7:</b> *Important* Gaps in Pedestrian Network Oakland Airport EPC</i>
+  <i><b>Figure 7:</b> Most Important Gaps in Pedestrian Network Oakland Airport EPC</i>
 </p>
 
 ...
@@ -230,7 +230,7 @@ analysis...
   <img width="800" height="800" alt="airport_new_routes" src="https://github.com/user-attachments/assets/74c443f8-2b06-4315-b351-15ed1a79ed0b" />
 </div>
 <p align="center">
-  <i><b>Figure 8:</b> Routes(?) Oakland Airport EPC</i>
+  <i><b>Figure 8:</b> Adjusted Routes in Oakland Airport EPC</i>
 </p>
 
 
@@ -238,19 +238,10 @@ analysis...
 analysis ...
 
 <div align="center">
-<img width="800" height="800" alt="nimitz_gaps" src="https://github.com/user-attachments/assets/797e2709-5c61-474a-bd98-80cdd18b9fac" />
+<img width="800" height="800" alt="nimitz_important_gap (1)" src="https://github.com/user-attachments/assets/cf37d3ff-abfa-4840-b563-d9c7249809b4" />
 </div>
 <p align="center">
-  <i><b>Figure 9:</b> Gaps in Pedestrian Network Nimitz EPC</i>
-</p>
-
-...
-
-<div align="center">
-<img width="800" height="800" alt="nimitz_important_gap" src="https://github.com/user-attachments/assets/b3d2d2dd-d802-4f1e-90ab-926c4af104cb" />
-</div>
-<p align="center">
-  <i><b>Figure 10:</b> *Important* Gaps in Pedestrian Network Nimitz EPC</i>
+  <i><b>Figure 9:</b> Most Important Gaps in Pedestrian Network Nimitz EPC</i>
 </p>
 ...
 
@@ -258,25 +249,17 @@ analysis ...
 <img width="800" height="800" alt="nimitz_new_routes" src="https://github.com/user-attachments/assets/68887ad1-3790-47e4-838b-985f5b0a299d" />
 </div>
 <p align="center">
-  <i><b>Figure 11:</b> Routes(?) Nimitz EPC</i>
+  <i><b>Figure 10:</b> Adjusted Routes in Nimitz EPC</i>
 </p>
 
 #### West Oakland EPC Accessibility Analysis 
 analysis ... 
 
-<div align="center">
-<img width="800" height="800" alt="west_oakland_gaps" src="https://github.com/user-attachments/assets/82575e48-3305-41b1-96bf-6e5ed42d72e8" />
-</div>
-<p align="center">
-  <i><b>Figure 12:</b> Gaps in Pedestrian Network West Oakland EPC</i>
-</p>
-
-...
 
 <div align="center">
 <img width="800" height="800" alt="west_oakland_important_gap" src="https://github.com/user-attachments/assets/785b2cfe-4a8e-4d10-a17a-48cf42af4d06" />
 <p align="center">
-  <i><b>Figure 13:</b> *Important* Gaps in Pedestrian Network West Oakland EPC</i>
+  <i><b>Figure 11:</b> Important Gaps in Pedestrian Network West Oakland EPC</i>
 </p>
 
 ...
@@ -284,13 +267,26 @@ analysis ...
 <div align="center">
 <img width="800" height="800" alt="west_oakland_new_routes" src="https://github.com/user-attachments/assets/14e16145-b788-44f4-8ee8-e769694e14df" />
 <p align="center">
-  <i><b>Figure 14:</b> Routes(?) West Oakland EPC</i>
+  <i><b>Figure 12:</b> Adjusted Routes West Oakland EPC</i>
 </p>
 
 ...
 
-#### Key Patterns
-- ....
+#### Appendix
+
+<div align="center">
+<img width="800" height="800" alt="nimitz_gaps" src="https://github.com/user-attachments/assets/797e2709-5c61-474a-bd98-80cdd18b9fac" />
+</div>
+<p align="center">
+  <i><b>Figure 13:</b> Gaps in Pedestrian Network Nimitz EPC</i>
+</p>
+
+<div align="center">
+<img width="800" height="800" alt="west_oakland_gaps" src="https://github.com/user-attachments/assets/82575e48-3305-41b1-96bf-6e5ed42d72e8" />
+</div>
+<p align="center">
+  <i><b>Figure 14:</b> Gaps in Pedestrian Network West Oakland EPC</i>
+</p>
 
 
 ## References

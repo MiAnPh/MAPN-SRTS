@@ -1,0 +1,54 @@
+import pandas as pd
+import numpy as np
+import math
+import os, base64, requests
+import geopandas as gpd
+from tabulate import tabulate
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+import shutil
+import requests
+from google.colab import drive
+drive.mount('/content/drive')
+%run "/content/drive/MyDrive/Urban Informatics Final Project/Colab Notebooks/functions.ipynb"
+import os, base64, requests
+import matplotlib.ticker as ticker
+from matplotlib.ticker import FormatStrFormatter
+from matplotlib.patches import Patch
+import seaborn as sns
+from scipy import stats
+from scipy.stats import pearsonr
+from statsmodels.stats.proportion import proportions_ztest
+import researchpy as rp
+from census import Census
+!pip install lonboard
+from lonboard import PolygonLayer, Map
+import matplotlib.cm as cm
+from google.colab import userdata
+from google.colab import files
+import ipywidgets as widgets
+from IPython.display import display, HTML
+import matplotlib.colors as mcolors
+import gdown
+import zipfile
+from lonboard import Map, SolidPolygonLayer, ScatterplotLayer
+from lonboard.basemap import CartoBasemap
+from lonboard.colormap import apply_continuous_cmap
+from palettable.colorbrewer.sequential import YlGnBu_3
+!pip install geopandas
+!pip install contextily
+!pip install mapclassify
+!pip install "folium>=0.12"
+import math
+from tabulate import tabulate
+import contextily as ctx
+import mapclassify
+!curl -s -o pyproject.toml https://raw.githubusercontent.com/gboeing/osmnx-workshop/refs/heads/main/pyproject.toml && uv pip install -r pyproject.toml
+!pip install contextily
+from shapely.geometry import box
+import networkx as nx
+import osmnx as ox
+import folium
+from shapely.geometry import Point, LineString
+ox.settings.log_console = True
+from matplotlib.ticker import FormatStrFormatter

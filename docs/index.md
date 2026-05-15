@@ -267,6 +267,7 @@ When the critical missing link is resolved, a linear path is established. Crucia
 
 <div align="center">
 <img width="800" height="800" alt="west_oakland_important_gap" src="https://github.com/user-attachments/assets/785b2cfe-4a8e-4d10-a17a-48cf42af4d06" />
+</div>
 <p align="center">
   <i><b>Figure 11:</b> Important Gaps in Pedestrian Network West Oakland EPC</i>
 </p>

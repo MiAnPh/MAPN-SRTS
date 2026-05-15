@@ -203,11 +203,11 @@ According to the breakdown of school types in Figure 5, EPCs are more heavily se
 
 While we map the demographics of schools within EPCs, a notable caveat remains as discussed earlier in the missing data analysis regarding students in the EPCs who may be commuting out to schools in Non-EPC areas. These students are not captured in this analysis and their travel paths may be more complex than the transit-reliance being analyzed in this report.  
 
-### B) Generated Maps of EPCs
-The following analysis details the spatial relationship between pedestrian infrastructure, high-frequency transit nodes, and K-12 educational institutions across three representative EPC tracts. By layering Tile2Net-extracted pedestrian geometries with bus stop and school data, we can identify specific barriers that contribute to educational inequity. 
+### C) Generated Maps of EPCs
+The following analysis details the spatial relationship between pedestrian infrastructure, high-frequency transit nodes, and K-12 educational institutions across three representative EPC tracts. By layering Tile2Net-extracted pedestrian geometries with bus stop and school data, we can identify specific barriers that contribute to educational inequity. As noted in the methodology section, 3 maps were generated for each of the 3 EPC study areas. The maps showing all gaps for the Nimitz and West Oakland EPCs are excluded from this section due to redundancy and relevance to analysis. These maps can be found in the appendix.
 
 #### Oakland Airport EPC Accessibility Analysis 
-analysis...
+Figure 6 maps the complete inventory of structural and geometric deficiencies identified within the localized pedestrian network. These missing connections (highlighted in orange) represent missing sidewalks, crosswalk gaps, mid-block disconnects, or unpaved segments that disrupt contiguous pedestrian paths. Rather than analyzing these breaks in isolation, the spatial network pipeline evaluates them as systemic barriers that introduce artificial circuitry, forcing students to take significantly longer, less direct routes to their destinations.
 
 <div align="center">
 <img width="800" height="800" alt="airport_gaps" src="https://github.com/user-attachments/assets/1ab445bc-e4c7-4232-9aa6-eb42433b2ace" />
@@ -216,44 +216,49 @@ analysis...
   <i><b>Figure 6:</b> All Identified Gaps in Pedestrian Network Oakland Airport EPC</i>
 </p>
 
-...
+Figure 7 models the pedestrian routing behavior from the nearest high-frequency transit hubs to the destination school campus.
+- The baseline condition (blue lines) reflects the current network routing constraints. Due to the infrastructure breaks identified in Figure 6, student pedestrians are forced onto circuitous paths, increasing exposure to traffic conflicts along major thoroughfares like International Boulevard and Hegenberger Road.
+- The optimized alternative (red line) simulates a counterfactual scenario where key infrastructure gaps are remediated. By synthesizing these broken links back into the pedestrian grid, the network model uncovers a highly direct, efficient, and lower-stress corridor that minimizes overall walking travel time and avoids high-injury corridors.
+
+<div align="center">
+  <img width="800" height="800" alt="airport_new_routes" src="https://github.com/user-attachments/assets/74c443f8-2b06-4315-b351-15ed1a79ed0b" />
+</div>
+<p align="center">
+  <i><b>Figure 7:</b> Adjusted Routes in Oakland Airport EPC</i>
+</p>
+
+Figure 8 isolates the highest-utility interventions. By intersecting the theoretical optimal path (from Figure 7) with the complete gap inventory (from Figure 6), we pinpoint the exact conflict points that unlock the greatest network efficiency. The highlighted callouts indicate the specific, high-priority projects that yield the maximum reduction in student pedestrian circuitry per dollar spent. Remediating only these designated segments bridges the critical network divide, successfully converting a fragmented system into a safe, contiguous, transit-to-school corridor.
 
 <div align="center">
 <img width="800" height="800" alt="airport_important_gap (1)" src="https://github.com/user-attachments/assets/7730dac2-ed11-4f39-8298-0ba36f6557f4" />
 </div>
 <p align="center">
-  <i><b>Figure 7:</b> Most Important Gaps in Pedestrian Network Oakland Airport EPC</i>
+  <i><b>Figure 8:</b> Most Important Gaps in Pedestrian Network Oakland Airport EPC</i>
 </p>
-
-...
-<div align="center">
-  <img width="800" height="800" alt="airport_new_routes" src="https://github.com/user-attachments/assets/74c443f8-2b06-4315-b351-15ed1a79ed0b" />
-</div>
-<p align="center">
-  <i><b>Figure 8:</b> Adjusted Routes in Oakland Airport EPC</i>
-</p>
-
 
 #### Nimitz EPC Accessibility Analysis 
-analysis ...
-
-<div align="center">
-<img width="800" height="800" alt="nimitz_important_gap (1)" src="https://github.com/user-attachments/assets/cf37d3ff-abfa-4840-b563-d9c7249809b4" />
-</div>
-<p align="center">
-  <i><b>Figure 9:</b> Most Important Gaps in Pedestrian Network Nimitz EPC</i>
-</p>
-...
+Figure 9 reveals a stark failure in the current pedestrian network. Currently, there is no viable contiguous route from the nearest high-frequency transit stops to the destination school. This structural void forces students into a connectivity desert, where public transit access is physically decoupled from the school. While the model identifies a potential new route after addressing primary gaps, the resulting path is exceptionally long and circuitous. This creates a "Logic of Avoidance", a scenario where even a fixed route is so inefficient that no student would logically utilize it. The path is dictated not by the destination, but by the extreme detour required to navigate around the freeway's physical footprint.
 
 <div align="center">
 <img width="800" height="800" alt="nimitz_new_routes" src="https://github.com/user-attachments/assets/68887ad1-3790-47e4-838b-985f5b0a299d" />
 </div>
 <p align="center">
-  <i><b>Figure 10:</b> Adjusted Routes in Nimitz EPC</i>
+  <i><b>Figure 9:</b> Adjusted Routes in Nimitz EPC</i>
+</p>
+
+Figure 10 highlights the single most important project (highlighted in red) required to at least establish a physical connection across the divide. These maps visually capture the severance effect of the Nimitz Freeway. The highway acts as a massive physical barrier cutting through the heart of the community. Remedying this specific gap (Figure 10) technically yields a contiguous route (Figure 9), but the sheer length of the path proves that simple infrastructure fixes are often insufficient to overcome legacy planning decisions that prioritized vehicle throughput over community-scale pedestrian safety.
+
+<div align="center">
+<img width="800" height="800" alt="nimitz_important_gap (1)" src="https://github.com/user-attachments/assets/cf37d3ff-abfa-4840-b563-d9c7249809b4" />
+</div>
+<p align="center">
+  <i><b>Figure 10:</b> Most Important Gaps in Pedestrian Network Nimitz EPC</i>
 </p>
 
 #### West Oakland EPC Accessibility Analysis 
-analysis ... 
+Figure 11 captures a shift in optimal path modeling. In the current network, student pedestrians traveling from the south must navigate a lengthy, rectangular loop around the neighborhood blocks to access the school campus from the north. This circuity occurs because the southern perimeter behaves as a closed boundary, blocking direct northern progression.
+
+When the critical missing link is resolved, a linear path is established. Crucially, this does not just streamline the walk, it unlocks an entirely new high-frequency bus stop origin to the south. Students arriving via this transit point can now enter the walking network immediately adjacent to their transit drop-off, bypassing the circuitous perimeter walk entirely.
 
 
 <div align="center">
@@ -262,15 +267,27 @@ analysis ...
   <i><b>Figure 11:</b> Important Gaps in Pedestrian Network West Oakland EPC</i>
 </p>
 
-...
+Figure 12 maps the structural gaps across West Oakland, highlighting the single project (highlighted red) that acts as the "gatekeeper" to this entire transit hub. While Figure 12 shows several minor missing connections (orange lines) throughout the neighborhood grid, the highlighted project at the southern terminus is the highest-leverage intervention.
+
+In classic infrastructure planning, projects are often prioritized based on linear feet of sidewalk laid or simple gap lengths. However, this case study proves the value of a network-utility approach. Remediating this single, short segment yields exponential benefits because it bridges two distinct systems: the local pedestrian grid and a high-frequency transit node that was previously functionally isolated from the school.
 
 <div align="center">
 <img width="800" height="800" alt="west_oakland_new_routes" src="https://github.com/user-attachments/assets/14e16145-b788-44f4-8ee8-e769694e14df" />
+</div>
 <p align="center">
   <i><b>Figure 12:</b> Adjusted Routes West Oakland EPC</i>
 </p>
 
-...
+### Comparative Case Study Synthesis & Regional Prioritization Framework
+By moving from a regional macro-demographic analysis to network-level micro-routing, our localized assessment of Lockwood Gardens, the Nimitz Freeway Corridor, and West Oakland reveals that not all pedestrian infrastructure gaps are created equal. Equal physical lengths of missing sidewalks can yield vastly different impacts on real-world student mobility.
+
+Airport (Path Optimization): This area represents the classic low-hanging fruit of pedestrian planning. The underlying street network is contiguous, but minor physical dropouts degrade pedestrian safety and routing. Remediating these high-utility gaps directly compresses student walking times and keeps children off high-injury corridors like International Boulevard.
+
+Nimitz Freeway Corridor (Structural Severance): Nimitz serves as a cautionary tale of infrastructural barriers. The freeway physically isolates the school from neighboring transit corridors. While repairing the gatekeeper gap establishes a continuous link on paper, the resulting path is so circuitous that it creates a "logic of avoidance" for students.
+
+West Oakland Corridor (Asset Activation): West Oakland showcases the power of a network-utility approach. The primary missing segment acts as a physical gatekeeper to the neighborhood’s southern border. Remediation does not merely improve an existing walk—it alters the network's geometry, immediately activating a high-frequency transit node that was previously completely inaccessible to the school campus.
+
+To maximize the return on municipal infrastructure investments, the Metropolitan Transportation Commission (MTC) should transition away from traditional prioritization metrics (e.g., funding projects purely based on linear feet of sidewalk laid or total gap length) and Focus on first- and last-mile in SRTS programming at a disaggregate, pedestrian scale and provide support for municipalities to build and maintain sidewalk inventories.
 
 #### Appendix
 

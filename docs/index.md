@@ -97,10 +97,14 @@ We include a map in Section 4, Initial results, to provide a visual representati
 
 ## 3. Limitations <a name="Limitations"></a>
 The following section outlines the boundaries of our analytical framework. While our methodology provides a data-driven approach to prioritizing sidewalk improvements, it is important to recognize that a spatial model is an approximation of reality. Our analysis primarily focuses on the physical proximity and infrastructure potential of school-to-transit corridors. It does not capture real-time behavioral data, individual student route choices, or the micro-scale quality of sidewalk pavement (such as cracks or narrowness) beyond what is available in the public record.
+
 Our findings are grounded in two primary assumptions: first, that enrollment is a valid proxy for the maximum potential impact of infrastructure improvements; and second, that students prioritize the shortest walking path between transit and school. To ensure the integrity of our results, we have validated our outputs against the MTC EPC definitions and performed internal pipeline audits to ensure that spatial joins correctly handled the coordinate reference system shifts across various California state and local datasets.
 Despite these validations, our model is subject to several forms of Dark Data. These limitations are detailed below.
+
 ## Missing Data Analysis
-While our model integrates bus, school, and census tract EPC data, it is subject to several forms of “Dark Data”, or data that is missing or hidden during the analytical process, as introduced by David J. Hand in his novel Dark Data: Why What You Don’t Know Matters<sup>18</sup>. This Dark Data is identified and classified in the following sections.
+While our routing model integrates standard transit, educational, and demographic datasets, any spatial model is an approximation of reality. To evaluate what our methodology cannot capture, where it makes assumptions, and how those factors affect our prioritization, we apply David J. Hand’s framework from Dark Data: Why What You Don’t Know Matters. By identifying where data is missing, hidden, or structurally obscured, we transition from a simple spatial join to a validated, high-utility network utility model.
+
+### Category 1: Highly Applicable Dark Data Gaps (Directly Affecting Results)
 ### A) Selection Bias and Target Population Gaps
 Our school data, drawn from California Open Data Portal (2023-2024), may omit non-traditional learning institutions such as “learning pods”, unregistered micro-schools post-pandemic, and transitional kindergarten and pre-K programs. This omission can be classified as both selection bias and a mismatch of the target population and the sample population. In other words, the data we are relying on only identifies schools officially registered by the State, leaving out non-traditional and unregistered schools. This bias can result in our conclusions also leaving students omitted by the data, resulting in an incomplete analysis of the impacted target population. 
 

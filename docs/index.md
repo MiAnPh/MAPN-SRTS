@@ -95,6 +95,25 @@ We include a map in Section 4, Initial results, to provide a visual representati
 4. The EPC layer was ingested via MTC API.
 5. School locations were mapped using datasets from the California Open Data Portal.
 
+### C) The Shortest-Path Route Analysis
+To understand how students actually navigate their neighborhoods, our model moves away from simple straight-line distances ("as the crow flies") and simulates real-world walking behavior. We accomplish this by transforming spatial sidewalk data into an interactive digital transit network.
+
+#### Building the Digital Network
+Our spatial model is like a digital "connect-the-dots" map of the neighborhood. Using Python data libraries, we convert physical geography into two core components:
+- Nodes (The Intersections): Every street corner, crosswalk entrance, and bus stop is mapped as a specific geographic coordinate point.
+- Edges (The Pathways): The actual segments of sidewalks or crosswalks that connect these points are mapped as pathways.
+
+By cleaning and linking these pieces together, we create a mathematically precise network grid where every path knows its exact length and location. Cleaning the pedestrian networks after pulling the data from Tile2Net was done through QGIS in order to fill or interpret any gaps that was missed by the program.
+
+#### Simulating Student Walking Logic
+With the digital grid established, we use a routing algorithm to calculate the absolute most efficient walking paths from local high-frequency bus stops to school gates. The model acts exactly like a smartphone navigation app, evaluating every possible combination of sidewalk segments to find the path that minimizes total walking distance.
+
+We run this routing simulation under two distinct scenarios:
+- The Baseline Condition: We calculate the best path a student can take using only the neighborhood's current, existing sidewalk network. If a critical sidewalk is missing, the model recognizes it as a dead end and forces the simulated student to take a longer detour.
+- The Remediation Counterfactual: We rerun the simulation after digitally fixing the missing connections. This allows us to see how a new sidewalk segment might unlock a much more direct, safer path.
+
+By comparing the distance of the winding current path against the streamlined remediated path, we isolate exactly how much unnecessary walking distance (circuity) is forced upon students by broken infrastructure. Gaps that cause the largest detours or block access to vital transit nodes are flagged as our highest priority for municipal repair.
+
 ## 3. Limitations <a name="Limitations"></a>
 The following section outlines the boundaries of our analytical framework. While our methodology provides a data-driven approach to prioritizing sidewalk improvements, it is important to recognize that a spatial model is an approximation of reality. Our analysis primarily focuses on the physical proximity and infrastructure potential of school-to-transit corridors. It does not capture real-time behavioral data, individual student route choices, or the micro-scale quality of sidewalk pavement (such as cracks or narrowness) beyond what is available in the public record.
 

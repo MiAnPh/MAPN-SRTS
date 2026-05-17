@@ -88,6 +88,7 @@ Our data cleaning process included the following steps for the following categor
 3. ACS data: The raw ACS 2020-2024 data provided raw counts rather than percentages. To normalize this, we calculated the proportion of zero vehicle households per tract by dividing households with access to zero vehicles by the total number of households. 
 4. AC Transit data (bus stops): open-source data was downloaded from the AC Transit Open Data Portal, and clipped to only include the selected EPCs. Remaining data cleaning for bus stops includes joining the stops with bus lines and schedules to filter out buses that don’t run frequent service during peak hours.
 5. Tile2Net (pedestrian pathways): we set the pathway geometries into Tile2Net by obtaining the rectangular envelope of selected EPCs and running Tile2Net, we then clipped the output to our EPCs. Remaining data cleaning for pedestrian pathways includes distinguishing between greenpaths, sidewalks, and crosswalks, and between gaps that are model noise versus genuine service gaps. Manual cleaning may be necessary to distinguish these data.
+6. Oakland Speed Limits data: As per our understanding of the dataset, any street for which an OMC informed speed limit wasn't included, we substituted in the CA state default of 25 for residential/commercial streets.
 
 We include a map in Section 4, Initial results, to provide a visual representation of EPC boundaries, socioeconomic status, and school location with regard to EPCs [above categories 1, 2, and 3]. For this map, we gathered the following data:
 1. Car-ownership metrics were derived from the 2018 American Community Survey (ACS) 5-Year Estimates (Table B25044). We calculated the ‘% Car 2. Free’ metric by aggregating households with zero available vehicles across both owner and renter tenures, providing a proxy for transit dependency.
@@ -96,17 +97,25 @@ We include a map in Section 4, Initial results, to provide a visual representati
 5. School locations were mapped using datasets from the California Open Data Portal.
 
 ### C) The Shortest-Path Route Analysis
-To understand how students actually navigate their neighborhoods, our model moves away from simple straight-line distances ("as the crow flies") and simulates real-world walking behavior. We accomplish this by transforming spatial sidewalk data into an interactive digital transit network.
+To understand how students actually navigate their neighborhoods, our model moves away from simple straight-line distances ("as the crow flies") and simulates real-world walking behavior. We accomplish this by using otherwise-rare sidewalk data instead of the more commonly used street networks.
 
 #### Building the Digital Network
-Our spatial model is like a digital "connect-the-dots" map of the neighborhood. Using Python data libraries, we convert physical geography into two core components:
-- Nodes (The Intersections): Every street corner, crosswalk entrance, and bus stop is mapped as a specific geographic coordinate point.
+Our spatial model is like a digital map of the neighborhood. Using Python data libraries, we convert physical geography into a Graph, with the two core components:
+- Nodes (The Intersections): Every street corner, crosswalk entrance, and bus stop is mapped as a specific geographic coordinate point, as well as points where a sidwalk or crosswalk changes direction.
 - Edges (The Pathways): The actual segments of sidewalks or crosswalks that connect these points are mapped as pathways.
 
 By cleaning and linking these pieces together, we create a mathematically precise network grid where every path knows its exact length and location. Cleaning the pedestrian networks after pulling the data from Tile2Net was done through QGIS in order to fill or interpret any gaps that was missed by the program.
 
+#### Weighting the Graph
+With edges created, we applied weight to enable better routing. After all, traversing 30 feet of sidewalk and 30 feet of crosswalk are not the same and should be treated as such. 
+
+This weighting considered three key factors:
+Distance: the length of the edge
+Facility Type: sidewalk, crosswalk, or (new) midblock crossing. Which facility type determined an exponential modifier applied to distance. For sidewalks that modifier is 1, so no modifier, and we applied a smaller modifier for new midblock crossings than for crosswalks (and existing midblock crossings) with the assumption that new midblocks made with safety in mind would receive the necessary traffic calming treatments needed to make them safer than a crosswalk is capable of being.
+Speed limit: Only applies to crosswalks and midblocks, increased the weight modifier based on the speed limit of the street being crossed. No penalty applied for a speed limit of 25, and a linearly increasing (or decreasing) penalty added for each mile above (or below) that baseline.
+
 #### Simulating Student Walking Logic
-With the digital grid established, we use a routing algorithm to calculate the absolute most efficient walking paths from local high-frequency bus stops to school gates. The model acts exactly like a smartphone navigation app, evaluating every possible combination of sidewalk segments to find the path that minimizes total walking distance.
+With the weighted graph established, we use a routing algorithm to calculate the most efficient walking paths from local high-frequency bus stops to school gates. Specifically we apply Dijkstra's Algorithm, the best choice for a weighted graph.
 
 We run this routing simulation under two distinct scenarios:
 - The Baseline Condition: We calculate the best path a student can take using only the neighborhood's current, existing sidewalk network. If a critical sidewalk is missing, the model recognizes it as a dead end and forces the simulated student to take a longer detour.
@@ -143,10 +152,12 @@ Instead of scaling down for absenteeism, we acknowledge enrollment as a ceiling 
 ---
 
 ### D) Intentional Hiding, Fraud, and Information Asymmetry
-For intentional hiding, fraud, and information asymmetry, we assume that the California Department of Education and local transit agencies are reporting in good faith for public record. While "gaming the system" (e.g., drivers skipping stops to improve on-time metrics) is addressed in our Strategic Dark Data section, we found no evidence of systematic fraud that would fundamentally alter the physical location of stops or schools.
+For intentional hiding, fraud, and information asymmetry, we assume that the California Department of Education and local transit agencies are reporting in good faith for public record.
 
 ### E) Technical Limitations and Incomplete Records
-While minor gaps likely exist in any large-scale portal, our data consists of static infrastructure and enrollment records rather than real-time sensor streams. Therefore, we do not expect random technical glitches to create the systemic darkness that would invalidate the spatial model.
+While minor gaps likely exist in any large-scale portal, our data consists of static infrastructure and enrollment records rather than real-time sensor streams. Therefore, we do not expect random technical glitches to create the systemic darkness that would invalidate the spatial model. 
+
+Tile2Net, on the other hand, does have its limitations, especially as it was trained on dense urban cities on the East Coast of the US, not the Bay Area. We addressed this model noise with hand checking and cleaning of the output.
 
 ### F) Experimental Conditions and Cognitive Biases
 Because this is an observational study of existing infrastructure rather than a controlled trial, Experimental Conditions do not apply. Similarly, Cognitive Biases are minimized here by our reliance on algorithmic spatial joins rather than qualitative surveys or subjective human reporting.
@@ -158,14 +169,13 @@ While historically interesting, our study is a point-in-time diagnostic of curre
 Our study primarily utilizes Designed Data (census and enrollment records created for a specific purpose). While Exhaust Data (digital footprints like GPS pings from student phones) could theoretically provide higher resolution, its absence is a choice of scope rather than an unintentional gap. We rely on the designed nature of official records to ensure a consistent baseline across all EPCs.
 
 ### I) Missing Data Types (Missing at Random [MAR] vs. Missing Not at Random [MNAR])
-In statistical terms, most of our gaps are Missing Not at Random (MNAR). For instance, the omission of "learning pods" (Section A) is not a random glitch; it is specifically linked to the nature of those institutions. Because these values are MNAR, we cannot use standard imputation to "fill in" the gaps, which reinforces our decision to use a Reliability Buffer and Weighting Factors as our primary means of mitigation.
-
-We plan to mitigate this dark data by applying weighting factors based on district-level absenteeism rates in EPCs to scale our demand forecast to a more realistic daily ridership level. 
+In statistical terms, most of our gaps are Missing Not at Random (MNAR). For instance, the omission of "learning pods" (Section A) is not a random glitch; it is specifically linked to the nature of those institutions. Because these values are MNAR, we cannot use standard imputation to "fill in" the gaps. That said, the focus of our project is in public schools where most students are represented.
 
 ### K) The Modifiable Areal Unit Problem (MAUP)
 Our analysis utilizes Census Tract boundaries as the primary unit of analysis to define EPCs. We selected Census Tracts because they are the smallest geographic unit for which the high-quality longitudinal demographic data required by the EPC framework (such as income-to-poverty ratios and vehicle ownership) is consistently available.
 
 However, we acknowledge that Census Tracts are modifiable areal units; they are administrative boundaries rather than natural or behavioral ones. Hand’s framework warns that data can be "darkened" by this aggregation, a phenomenon known as MAUP. If these boundaries were redrawn—for example, shifting a border by one block—certain school zones might lose or gain EPC status, fundamentally shifting our priority recommendations.
+
 ## 4. Initial Results and Visualizations <a name="Initial-Results-Visualizations"></a>
 
 The map below layers building-level footprints, MTC designated EPCs, and schools in EPCs. The EPCs highlight areas requiring focused MTC investment and support; users can toggle these layers independently to explore how school proximity overlaps with socioeconomic priority zones. The sections below include a detailed analysis of school access equity, using metrics such as Zero Vehicle Households (ZVH), socioeconomic status, race/ethnicity, and school types.
